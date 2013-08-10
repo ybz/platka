@@ -1,14 +1,19 @@
 import os
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
-db = SQLAlchemy(app)
+app = None
 
-@app.route('/')
-def index():
-    return 'hello platka'
+def init_app():
+    global app
 
-if __name__ == "__main__":
-    app.run()
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
+
+    import models; models;
+
+    @app.route('/')
+    def index():
+        return 'hello platka'
+        return app
+
+    return app
