@@ -1,4 +1,5 @@
 from app import app
+from flask import render_template
 from flask_utils import json_response
 
 import api; api
@@ -6,7 +7,7 @@ import api; api
 
 @app.route('/')
 def index():
-    return 'hello platka'
+    return render_template('index.html')
 
 @app.route('/test_json')
 def test_json():
