@@ -1,9 +1,13 @@
 from app import app
-from flask import render_template
+from flask import render_template, send_file
 from flask_utils import json_response
 
 import api; api
 
+
+@app.route('/favicon.ico')
+def favicon():
+    return app.send_static_file('favicon.ico')
 
 @app.route('/')
 def index():
