@@ -5,7 +5,7 @@ assets = Environment(app)
 
 assets.register('css_reset',
     'core/reset.scss',
-    output='gen/reset.css', filters='pyscss')
+    output='gen/reset.css', filters='scss')
 
 vendor_js = Bundle('vendor/lodash/lodash.js', 'vendor/backbone/backbone.js')
 index_coffee = Bundle('index/*.coffee', filters='coffeescript', output='gen/index.coffee.js')
