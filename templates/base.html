@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        {% assets 'css_reset' %} <link type='text/css' rel='stylesheet' href='{{ ASSET_URL }}'/> {% endassets %}
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
