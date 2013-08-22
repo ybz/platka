@@ -9,6 +9,7 @@ def init_app():
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
     app.config['DEBUG'] = bool(int(os.environ.get('DEBUG', 0)))
+    app.config['ASSETS_DEBUG'] = bool(int(os.environ.get('ASSETS_DEBUG', 0)))
 
     import assets; assets
     import models; models
