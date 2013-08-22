@@ -3,6 +3,7 @@ from flask import render_template
 from utils.flask_utils import json_response
 
 import api; api
+import auth; auth;
 
 
 @app.route('/favicon.ico')

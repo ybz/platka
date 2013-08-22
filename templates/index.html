@@ -1,9 +1,7 @@
 <html>
     <head>
-        <link type='text/css' rel='stylesheet' href='./static/index/index.css'>
-        {% assets 'index_js' %}
-            <script type='text/javascript' src="{{ ASSET_URL }}"></script>
-        {% endassets %}
+        {% assets 'css_reset' %} <link type='text/css' rel='stylesheet' href='{{ ASSET_URL }}'/> {% endassets %}
+        {% assets 'index_js' %} <script type='text/javascript' src="{{ ASSET_URL }}"></script> {% endassets %}
     </head>
     <body>
         <h1>Hello platka</h1>
