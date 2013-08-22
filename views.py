@@ -1,6 +1,6 @@
 from app import app
-from flask import render_template, send_file
-from flask_utils import json_response
+from flask import render_template
+from utils.flask_utils import json_response
 
 import api; api
 
