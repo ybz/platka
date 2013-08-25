@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<h1>login page</h1>
+{% assets 'css_login' %} <link type='text/css' rel='stylesheet' href='{{ ASSET_URL }}'/> {% endassets %}
 {% endblock %}
 
 {% block body %}
+
+<h1>login page</h1>
+
+<form action='/api/session' method='put'>
+    <div>
+        <label for='username'>Username</label>
+        <input type='text' name='username' autofocus='true' placeholder='Username'/>
+    </div>
+    <div class="button_wrapper">
+        <button type='submit'>Sign In</button>
+    </div>
+</form>
+
 {% endblock %}
